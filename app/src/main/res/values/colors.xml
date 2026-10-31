@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- RoomHub design system: brand palette (light) -->
+    <color name="rh_primary">#2F5BD3</color>
+    <color name="rh_on_primary">#FFFFFF</color>
+    <color name="rh_primary_container">#DCE3FF</color>
+    <color name="rh_on_primary_container">#0A1B55</color>
+    <color name="rh_secondary">#00796B</color>
+    <color name="rh_on_secondary">#FFFFFF</color>
+    <color name="rh_secondary_container">#C8EEE7</color>
+    <color name="rh_on_secondary_container">#00201C</color>
+    <color name="rh_error">#BA1A1A</color>
+    <color name="rh_on_error">#FFFFFF</color>
+    <color name="rh_error_container">#FFDAD6</color>
+    <color name="rh_on_error_container">#410002</color>
+    <color name="rh_background">#F7F8FC</color>
+    <color name="rh_surface">#F7F8FC</color>
+    <color name="rh_on_surface">#1A1C22</color>
+    <color name="rh_surface_variant">#E1E2EC</color>
+    <color name="rh_on_surface_variant">#44474F</color>
+    <color name="rh_surface_container_lowest">#FFFFFF</color>
+    <color name="rh_surface_container_low">#F1F3F9</color>
+    <color name="rh_surface_container">#ECEEF4</color>
+    <color name="rh_surface_container_high">#E6E8EF</color>
+    <color name="rh_outline">#757780</color>
+    <color name="rh_outline_variant">#C5C6D0</color>
+
+    <!-- Semantic status colours (always paired with an icon and a text label) -->
+    <color name="status_vacant">#1B7F3B</color>
+    <color name="status_vacant_container">#D5F3DE</color>
+    <color name="status_booked">#B3261E</color>
+    <color name="status_booked_container">#FCE1DE</color>
+    <color name="status_pending">#8A5300</color>
+    <color name="status_pending_container">#FFE8C2</color>
+    <color name="status_neutral">#55585F</color>
+    <color name="status_neutral_container">#E4E5EA</color>
+
+    <color name="timeline_track">#E6E8EF</color>
+    <color name="timeline_booked">#E57368</color>
+    <color name="timeline_pending">#F0B44C</color>
+    <color name="timeline_grid">#C5C6D0</color>
+</resources>

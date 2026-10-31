@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rh_primary">#B5C4FF</color>
+    <color name="rh_on_primary">#0E2C79</color>
+    <color name="rh_primary_container">#2A47A8</color>
+    <color name="rh_on_primary_container">#DCE3FF</color>
+    <color name="rh_secondary">#7DD8C9</color>
+    <color name="rh_on_secondary">#003731</color>
+    <color name="rh_secondary_container">#005047</color>
+    <color name="rh_on_secondary_container">#C8EEE7</color>
+    <color name="rh_error">#FFB4AB</color>
+    <color name="rh_on_error">#690005</color>
+    <color name="rh_error_container">#93000A</color>
+    <color name="rh_on_error_container">#FFDAD6</color>
+    <color name="rh_background">#121318</color>
+    <color name="rh_surface">#121318</color>
+    <color name="rh_on_surface">#E3E2E9</color>
+    <color name="rh_surface_variant">#44474F</color>
+    <color name="rh_on_surface_variant">#C5C6D0</color>
+    <color name="rh_surface_container_lowest">#0D0E13</color>
+    <color name="rh_surface_container_low">#1A1B21</color>
+    <color name="rh_surface_container">#1E1F25</color>
+    <color name="rh_surface_container_high">#292A30</color>
+    <color name="rh_outline">#8F9099</color>
+    <color name="rh_outline_variant">#44474F</color>
+
+    <color name="status_vacant">#8FDCA4</color>
+    <color name="status_vacant_container">#0F4A23</color>
+    <color name="status_booked">#FFB4AB</color>
+    <color name="status_booked_container">#6B1A14</color>
+    <color name="status_pending">#FFCB7A</color>
+    <color name="status_pending_container">#5A3800</color>
+    <color name="status_neutral">#C5C6D0</color>
+    <color name="status_neutral_container">#33353B</color>
+
+    <color name="timeline_track">#2B2D33</color>
+    <color name="timeline_booked">#C2554B</color>
+    <color name="timeline_pending">#C48A22</color>
+    <color name="timeline_grid">#44474F</color>
+</resources>
