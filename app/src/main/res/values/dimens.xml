@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 8dp spacing grid -->
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_s">8dp</dimen>
+    <dimen name="space_m">16dp</dimen>
+    <dimen name="space_l">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+    <dimen name="screen_padding">16dp</dimen>
+    <dimen name="content_max_width">640dp</dimen>
+    <dimen name="avatar_size">44dp</dimen>
+    <dimen name="room_badge_size">48dp</dimen>
+    <dimen name="touch_target">48dp</dimen>
+</resources>
