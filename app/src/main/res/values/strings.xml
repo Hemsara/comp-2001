@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RoomHub</string>
+    <string name="app_tagline">Shared office booking</string>
+    <string name="manager_edition">Manager</string>
+
+    <!-- Sign in -->
+    <string name="login_title">Sign in to RoomHub</string>
+    <string name="login_subtitle">Use your work account. Your role decides which features you see.</string>
+    <string name="login_email">Work email</string>
+    <string name="login_password">Password</string>
+    <string name="login_remember">Keep me signed in on this device</string>
+    <string name="login_button">Sign in</string>
+    <string name="login_forgot">Forgot password?</string>
+    <string name="login_forgot_message">Password resets are handled by your IT service desk.</string>
+    <string name="login_error_email_empty">Enter your work email</string>
+    <string name="login_error_email_format">Enter an email like name@company.com</string>
+    <string name="login_error_password_empty">Enter your password</string>
+    <string name="login_error_credentials">Email or password not recognised. Check them and try again.</string>
+    <string name="login_error_role">%1$s is an Employee account. This build contains the Manager interface only.</string>
+    <string name="login_demo_hint">Demo account: alex.morgan@roomhub.test · RoomHub2026</string>
+    <string name="hero_title">Find, book and manage shared spaces</string>
+    <string name="hero_body">5 meeting rooms · 2 seminar rooms · live availability and conflict-free bookings.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_rooms">Rooms</string>
+    <string name="nav_bookings">Bookings</string>
+    <string name="nav_requests">Requests</string>
+    <string name="nav_profile">Profile</string>
+    <string name="title_room">Room</string>
+    <string name="title_new_booking">New booking</string>
+    <string name="title_booking">Booking</string>
+    <string name="title_request">Request</string>
+    <string name="title_confirmed">Booking confirmed</string>
+
+    <!-- Dashboard -->
+    <string name="dash_requests_banner">%1$d requests need a decision</string>
+    <string name="dash_requests_banner_sub">%1$d bookings · %2$d cancellations</string>
+    <string name="dash_review">Review</string>
+    <string name="dash_vacant_now">Rooms vacant now</string>
+    <string name="dash_today_count">Bookings today</string>
+    <string name="dash_booking_requests">Booking requests</string>
+    <string name="dash_cancel_requests">Cancellation requests</string>
+    <string name="dash_new_booking">New booking</string>
+    <string name="dash_today">Today\'s bookings</string>
+    <string name="dash_see_all">See all</string>
+    <string name="dash_all_clear">No requests waiting – you\'re all caught up.</string>
+
+    <!-- Rooms -->
+    <string name="rooms_showing">Showing status for</string>
+    <string name="rooms_all">All</string>
+    <string name="rooms_meeting">Meeting</string>
+    <string name="rooms_seminar">Seminar</string>
+    <string name="rooms_vacant">Vacant</string>
+    <string name="rooms_booked">Booked</string>
+    <string name="rooms_booked_until">until %1$s · %2$s</string>
+    <string name="rooms_free_until">free all of this slot</string>
+    <string name="rooms_seats">%1$d seats</string>
+    <string name="rooms_summary">%1$d of %2$d rooms vacant</string>
+    <string name="room_schedule">Schedule</string>
+    <string name="room_book">Book this room</string>
+    <string name="room_no_bookings">No bookings – vacant all day.</string>
+    <string name="prev_day">Previous day</string>
+    <string name="next_day">Next day</string>
+    <string name="timeline_key">Booked · dashed = awaiting approval · outline = your selection</string>
+
+    <!-- Create booking -->
+    <string name="booking_for">Booking for</string>
+    <string name="booking_for_me">Myself</string>
+    <string name="booking_for_other">Someone else</string>
+    <string name="booking_person">Person</string>
+    <string name="booking_person_hint">Search by name</string>
+    <string name="booking_person_notice">%1$s will be notified and see this in their reservations.</string>
+    <string name="booking_room">Room</string>
+    <string name="booking_date">Date</string>
+    <string name="booking_start">Start</string>
+    <string name="booking_end">End</string>
+    <string name="booking_title">Title</string>
+    <string name="booking_title_hint">e.g. Quarterly planning</string>
+    <string name="booking_attendees">Attendees</string>
+    <string name="booking_availability">Availability</string>
+    <string name="booking_submit">Book %1$s · %2$s</string>
+    <string name="booking_submit_for">Book %1$s for %2$s</string>
+    <string name="booking_submit_generic">Confirm booking</string>
+    <string name="booking_conflict">%1$s is already booked %2$s (%3$s).</string>
+    <string name="booking_suggest_time">Use %1$s</string>
+    <string name="booking_suggest_room">%1$s at same time</string>
+    <string name="booking_free">%1$s is free %2$s</string>
+    <string name="booking_err_time">End time must be after the start time</string>
+    <string name="booking_err_hours">Bookings are available 08:00–18:00</string>
+    <string name="booking_err_past">Choose a time in the future</string>
+    <string name="booking_err_title">Add a short title so attendees recognise the booking</string>
+    <string name="booking_err_person">Choose who the booking is for</string>
+    <string name="booking_warn_capacity">%1$s seats %2$d – consider a larger room</string>
+    <string name="booking_saving">Booking…</string>
+
+    <!-- Confirmation -->
+    <string name="confirmed_heading">Booking confirmed</string>
+    <string name="confirmed_body">The room is reserved and the booking has been added to the list.</string>
+    <string name="confirmed_for">Booked for</string>
+    <string name="confirmed_reference">Reference</string>
+    <string name="confirmed_view">View booking</string>
+    <string name="confirmed_done">Back to dashboard</string>
+    <string name="you_suffix">%1$s (you)</string>
+
+    <!-- Bookings -->
+    <string name="bookings_upcoming">Upcoming</string>
+    <string name="bookings_past">Past</string>
+    <string name="bookings_cancelled">Cancelled</string>
+    <string name="bookings_everyone">Everyone</string>
+    <string name="bookings_filter_person">Filter by person</string>
+    <string name="bookings_empty">No bookings here yet.</string>
+    <string name="bookings_for">for %1$s</string>
+
+    <!-- Booking detail -->
+    <string name="detail_when">When</string>
+    <string name="detail_booked_by">Booked by</string>
+    <string name="detail_booked_for">Booked for</string>
+    <string name="detail_attendees">Attendees</string>
+    <string name="detail_reference">Reference</string>
+    <string name="detail_cancel">Cancel booking</string>
+    <string name="detail_cancel_title">Cancel this booking?</string>
+    <string name="detail_cancel_body">%1$s will become available %2$s. %3$s will be notified.</string>
+    <string name="detail_keep">Keep booking</string>
+    <string name="detail_cancelled">Booking cancelled</string>
+    <string name="undo">Undo</string>
+
+    <!-- Requests -->
+    <string name="req_tab_bookings">Bookings (%1$d)</string>
+    <string name="req_tab_cancellations">Cancellations (%1$d)</string>
+    <string name="req_no_clash">No clash</string>
+    <string name="req_clash">Clashes with %1$s</string>
+    <string name="req_approve">Approve</string>
+    <string name="req_decline">Decline</string>
+    <string name="req_keep">Keep booking</string>
+    <string name="req_approve_cancel">Approve cancellation</string>
+    <string name="req_approved">Approved – %1$s notified</string>
+    <string name="req_declined">Declined – %1$s notified</string>
+    <string name="req_cancel_approved">Cancellation approved – %1$s is free</string>
+    <string name="req_cancel_kept">Booking kept – %1$s notified</string>
+    <string name="req_empty">All caught up – no requests waiting.</string>
+    <string name="req_requested">Requested %1$s</string>
+    <string name="req_purpose">Purpose</string>
+    <string name="req_day_schedule">Room schedule that day</string>
+    <string name="req_clash_block">Approving is blocked: %1$s already holds the room %2$s. Decline or ask the employee to pick another time.</string>
+    <string name="req_decline_title">Decline request?</string>
+    <string name="req_decline_reason">Reason</string>
+    <string name="req_decline_message">Message to %1$s (optional)</string>
+    <string-array name="decline_reasons">
+        <item>Room needed for another event</item>
+        <item>Clashes with an existing booking</item>
+        <item>Room not suitable for the group size</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Profile -->
+    <string name="profile_role_manager">Manager</string>
+    <string name="profile_notifications">Booking notifications</string>
+    <string name="profile_notifications_sub">Requests, approvals and cancellations</string>
+    <string name="profile_help">Help &amp; accessibility</string>
+    <string name="profile_help_sub">Guides, text size and contrast</string>
+    <string name="profile_signout">Sign out</string>
+    <string name="profile_signout_confirm">Sign out of RoomHub?</string>
+    <string name="cancel">Cancel</string>
+    <string name="cd_avatar">Profile picture for %1$s</string>
+</resources>
