@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.comp2000.roomhub.ui.dashboard.DashboardFragment"
+        android:label="@string/nav_home">
+        <deepLink app:uri="roomhub://app/home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_rooms"
+        android:name="com.comp2000.roomhub.ui.rooms.RoomsFragment"
+        android:label="@string/nav_rooms">
+        <deepLink app:uri="roomhub://app/rooms" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_bookings"
+        android:name="com.comp2000.roomhub.ui.booking.BookingsFragment"
+        android:label="@string/nav_bookings">
+        <deepLink app:uri="roomhub://app/bookings" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_requests"
+        android:name="com.comp2000.roomhub.ui.requests.RequestsFragment"
+        android:label="@string/nav_requests">
+        <argument android:name="tab" android:defaultValue="0" app:argType="integer" />
+        <deepLink app:uri="roomhub://app/requests?tab={tab}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.comp2000.roomhub.ui.profile.ProfileFragment"
+        android:label="@string/nav_profile">
+        <deepLink app:uri="roomhub://app/profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_room_detail"
+        android:name="com.comp2000.roomhub.ui.rooms.RoomDetailFragment"
+        android:label="@string/title_room">
+        <argument android:name="roomId" app:argType="string" />
+        <deepLink app:uri="roomhub://app/room/{roomId}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_create_booking"
+        android:name="com.comp2000.roomhub.ui.booking.CreateBookingFragment"
+        android:label="@string/title_new_booking">
+        <argument android:name="roomId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <argument android:name="date" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <argument android:name="start" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <argument android:name="onBehalf" android:defaultValue="false" app:argType="boolean" />
+        <deepLink app:uri="roomhub://app/new?roomId={roomId}&amp;date={date}&amp;start={start}&amp;onBehalf={onBehalf}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_booking_confirmed"
+        android:name="com.comp2000.roomhub.ui.booking.BookingConfirmedFragment"
+        android:label="@string/title_confirmed">
+        <argument android:name="bookingId" app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_booking_detail"
+        android:name="com.comp2000.roomhub.ui.booking.BookingDetailFragment"
+        android:label="@string/title_booking">
+        <argument android:name="bookingId" app:argType="string" />
+        <deepLink app:uri="roomhub://app/booking/{bookingId}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_request_detail"
+        android:name="com.comp2000.roomhub.ui.requests.RequestDetailFragment"
+        android:label="@string/title_request">
+        <argument android:name="requestId" app:argType="string" />
+        <deepLink app:uri="roomhub://app/request/{requestId}" />
+    </fragment>
+</navigation>
