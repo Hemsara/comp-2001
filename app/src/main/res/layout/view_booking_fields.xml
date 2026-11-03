@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- CR2: who the booking is for is the first, explicit decision. -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:accessibilityHeading="true"
+        android:text="@string/booking_for"
+        android:textAppearance="@style/TextAppearance.RoomHub.SectionLabel" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/for_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        app:checkedButton="@id/for_me"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/for_me"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="@dimen/touch_target"
+            android:text="@string/booking_for_me"
+            app:icon="@drawable/ic_person" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/for_other"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="@dimen/touch_target"
+            android:text="@string/booking_for_other"
+            app:icon="@drawable/ic_group" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/person_layout"
+        style="@style/Widget.RoomHub.TextInput.Dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_m"
+        android:hint="@string/booking_person"
+        android:visibility="gone"
+        app:placeholderText="@string/booking_person_hint"
+        app:startIconDrawable="@drawable/ic_person">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:completionThreshold="1"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/person_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:drawablePadding="@dimen/space_s"
+        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_notifications"
+        app:drawableTint="?attr/colorOnSurfaceVariant" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_l"
+        android:accessibilityHeading="true"
+        android:text="@string/booking_room"
+        android:textAppearance="@style/TextAppearance.RoomHub.SectionLabel" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/room_layout"
+        style="@style/Widget.RoomHub.TextInput.Dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:hint="@string/booking_room"
+        app:startIconDrawable="@drawable/ic_meeting_room">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:hint="@string/booking_date"
+        app:startIconDrawable="@drawable/ic_event">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/start_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_s"
+            android:layout_weight="1"
+            android:hint="@string/booking_start"
+            app:startIconDrawable="@drawable/ic_schedule">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/end_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/booking_end"
+            app:startIconDrawable="@drawable/ic_schedule">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_l"
+        android:accessibilityHeading="true"
+        android:text="Details"
+        android:textAppearance="@style/TextAppearance.RoomHub.SectionLabel"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:hint="@string/booking_title"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        app:placeholderText="@string/booking_title_hint"
+        app:startIconDrawable="@drawable/ic_edit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"
+            android:maxLength="40" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/attendees_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:hint="@string/booking_attendees"
+        app:startIconDrawable="@drawable/ic_group">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/attendees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
