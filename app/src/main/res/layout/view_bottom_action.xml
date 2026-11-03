@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sticky primary action, kept in thumb reach (Fitts's law). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurfaceContainer"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/screen_padding"
+    android:paddingVertical="12dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/secondary_action"
+        style="@style/Widget.RoomHub.Button.Outlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_s"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/primary_action"
+        style="@style/Widget.RoomHub.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+</LinearLayout>

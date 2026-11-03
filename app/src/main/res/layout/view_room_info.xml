@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:id="@+id/hero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_hero"
+            android:minHeight="148dp"
+            android:orientation="vertical"
+            android:padding="@dimen/space_l">
+
+            <TextView
+                android:id="@+id/hero_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.85"
+                android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                android:textColor="@android:color/white"
+                tools:text="MEETING ROOM · M3" />
+
+            <TextView
+                android:id="@+id/hero_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:accessibilityHeading="true"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                tools:text="Cedar" />
+
+            <TextView
+                android:id="@+id/hero_status"
+                style="@style/Widget.RoomHub.StatusPill"
+                android:layout_marginTop="@dimen/space_m" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/facts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:orientation="vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:text="Facilities"
+        android:textAppearance="@style/TextAppearance.RoomHub.SectionLabel"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/amenities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs" />
+</LinearLayout>

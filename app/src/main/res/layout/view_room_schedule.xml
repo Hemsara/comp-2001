@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:accessibilityHeading="true"
+            android:text="@string/room_schedule"
+            android:textAppearance="@style/TextAppearance.RoomHub.SectionLabel" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/prev_day"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/prev_day"
+            app:icon="@drawable/ic_chevron_left" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/day"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="96dp"
+            tools:text="Today" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next_day"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/next_day"
+            app:icon="@drawable/ic_chevron_right" />
+    </LinearLayout>
+
+    <com.comp2000.roomhub.ui.common.AvailabilityStripView
+        android:id="@+id/strip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/timeline_key"
+        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+        android:textColor="?attr/colorOnSurfaceVariant" />
+
+    <LinearLayout
+        android:id="@+id/day_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="-4dp"
+        android:layout_marginTop="@dimen/space_s"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/day_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:drawablePadding="@dimen/space_s"
+        android:text="@string/room_no_bookings"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_check_circle"
+        app:drawableTint="@color/status_vacant" />
+</LinearLayout>
