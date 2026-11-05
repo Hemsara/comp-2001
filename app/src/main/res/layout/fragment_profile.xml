@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <TextView
+            android:id="@+id/avatar"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="@dimen/space_m"
+            android:background="@drawable/bg_avatar"
+            android:backgroundTint="?attr/colorPrimaryContainer"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+            android:textColor="?attr/colorOnPrimaryContainer"
+            tools:text="AM" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_m"
+            android:accessibilityHeading="true"
+            android:textAppearance="@style/TextAppearance.RoomHub.Headline"
+            tools:text="Alex Morgan" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            tools:text="alex.morgan@roomhub.test" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/role"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_s"
+            android:clickable="false"
+            android:text="@string/profile_role_manager"
+            app:chipIcon="@drawable/ic_lock" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.RoomHub.Card.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_l">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/space_m"
+                android:paddingVertical="@dimen/space_s">
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:minHeight="56dp"
+                    android:text="@string/profile_notifications" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="56dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/profile_help"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_help"
+                        app:tint="?attr/colorOnSurfaceVariant" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sign_out"
+            style="@style/Widget.RoomHub.Button.Destructive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_l"
+            android:text="@string/profile_signout"
+            app:icon="@drawable/ic_logout"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
