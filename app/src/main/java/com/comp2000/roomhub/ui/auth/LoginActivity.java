@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -30,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         ActivityLoginBinding binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
