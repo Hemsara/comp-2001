@@ -46,10 +46,10 @@ public class DashboardFragment extends Fragment {
         b.bannerAction.setOnClickListener(v -> openRequests(0));
         b.newBooking.setOnClickListener(v -> navigate(R.id.nav_create_booking, null));
         b.seeAll.setOnClickListener(v -> Nav.toTopLevel(this, R.id.nav_bookings, null));
-        b.statVacant.getRoot().setOnClickListener(v -> Nav.toTopLevel(this, R.id.nav_rooms, null));
-        b.statToday.getRoot().setOnClickListener(v -> Nav.toTopLevel(this, R.id.nav_bookings, null));
-        b.statRequests.getRoot().setOnClickListener(v -> openRequests(0));
-        b.statCancellations.getRoot().setOnClickListener(v -> openRequests(1));
+        b.stats.statVacant.getRoot().setOnClickListener(v -> Nav.toTopLevel(this, R.id.nav_rooms, null));
+        b.stats.statToday.getRoot().setOnClickListener(v -> Nav.toTopLevel(this, R.id.nav_bookings, null));
+        b.stats.statRequests.getRoot().setOnClickListener(v -> openRequests(0));
+        b.stats.statCancellations.getRoot().setOnClickListener(v -> openRequests(1));
 
         RoomHubRepository.get().addListener(refresher);
         render();
@@ -71,10 +71,10 @@ public class DashboardFragment extends Fragment {
         b.bannerSub.setText(getString(R.string.dash_requests_banner_sub, bookingReq, cancelReq));
 
         int rooms = repo.getRooms(null).size();
-        stat(b.statVacant, R.drawable.ic_meeting_room, repo.vacantRoomCount(now) + " / " + rooms, getString(R.string.dash_vacant_now));
-        stat(b.statToday, R.drawable.ic_event, String.valueOf(repo.bookingsOn(now.toLocalDate()).size()), getString(R.string.dash_today_count));
-        stat(b.statRequests, R.drawable.ic_inbox, String.valueOf(bookingReq), getString(R.string.dash_booking_requests));
-        stat(b.statCancellations, R.drawable.ic_cancel, String.valueOf(cancelReq), getString(R.string.dash_cancel_requests));
+        stat(b.stats.statVacant, R.drawable.ic_meeting_room, repo.vacantRoomCount(now) + " / " + rooms, getString(R.string.dash_vacant_now));
+        stat(b.stats.statToday, R.drawable.ic_event, String.valueOf(repo.bookingsOn(now.toLocalDate()).size()), getString(R.string.dash_today_count));
+        stat(b.stats.statRequests, R.drawable.ic_inbox, String.valueOf(bookingReq), getString(R.string.dash_booking_requests));
+        stat(b.stats.statCancellations, R.drawable.ic_cancel, String.valueOf(cancelReq), getString(R.string.dash_cancel_requests));
 
         adapter.submit(repo.bookingsOn(now.toLocalDate()), false);
     }

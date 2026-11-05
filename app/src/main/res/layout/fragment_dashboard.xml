@@ -97,19 +97,13 @@
             app:drawableStartCompat="@drawable/ic_check_circle"
             app:drawableTint="@color/status_vacant" />
 
-        <GridLayout
+        <include
             android:id="@+id/stats"
+            layout="@layout/view_dashboard_stats"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="-4dp"
-            android:layout_marginTop="@dimen/space_s"
-            android:columnCount="@integer/stat_grid_span">
-
-            <include android:id="@+id/stat_vacant" layout="@layout/view_stat_card" />
-            <include android:id="@+id/stat_today" layout="@layout/view_stat_card" />
-            <include android:id="@+id/stat_requests" layout="@layout/view_stat_card" />
-            <include android:id="@+id/stat_cancellations" layout="@layout/view_stat_card" />
-        </GridLayout>
+            android:layout_marginTop="@dimen/space_s" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/new_booking"

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Compact width: 2 x 2 status tiles. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+            <include android:id="@+id/stat_vacant" layout="@layout/view_stat_card" />
+            <include android:id="@+id/stat_today" layout="@layout/view_stat_card" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+            <include android:id="@+id/stat_requests" layout="@layout/view_stat_card" />
+            <include android:id="@+id/stat_cancellations" layout="@layout/view_stat_card" />
+    </LinearLayout>
+</LinearLayout>
